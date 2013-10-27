@@ -48,6 +48,7 @@
 		834019A1181DCD4A006E4D78 /* CDZScanActionText.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019A0181DCD4A006E4D78 /* CDZScanActionText.m */; };
 		834019A6181DD127006E4D78 /* CDZScanActionMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019A5181DD127006E4D78 /* CDZScanActionMap.m */; };
 		834019A9181DD5CC006E4D78 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019A8181DD5CC006E4D78 /* NSString+URLEncoding.m */; };
+		834019AC181DD6B1006E4D78 /* CDZScanActionGoogleMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019AB181DD6B1006E4D78 /* CDZScanActionGoogleMap.m */; };
 		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +113,8 @@
 		834019A5181DD127006E4D78 /* CDZScanActionMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionMap.m; sourceTree = "<group>"; };
 		834019A7181DD5CC006E4D78 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
 		834019A8181DD5CC006E4D78 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		834019AA181DD6B1006E4D78 /* CDZScanActionGoogleMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionGoogleMap.h; sourceTree = "<group>"; };
+		834019AB181DD6B1006E4D78 /* CDZScanActionGoogleMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionGoogleMap.m; sourceTree = "<group>"; };
 		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -276,6 +279,8 @@
 				834019A0181DCD4A006E4D78 /* CDZScanActionText.m */,
 				834019A4181DD127006E4D78 /* CDZScanActionMap.h */,
 				834019A5181DD127006E4D78 /* CDZScanActionMap.m */,
+				834019AA181DD6B1006E4D78 /* CDZScanActionGoogleMap.h */,
+				834019AB181DD6B1006E4D78 /* CDZScanActionGoogleMap.m */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 			files = (
 				834019A9181DD5CC006E4D78 /* NSString+URLEncoding.m in Sources */,
 				83401953181D926D006E4D78 /* CDZAppDelegate.m in Sources */,
+				834019AC181DD6B1006E4D78 /* CDZScanActionGoogleMap.m in Sources */,
 				83401956181D926D006E4D78 /* QRScanner.xcdatamodeld in Sources */,
 				8340199B181DC39D006E4D78 /* CDZScanActionCall.m in Sources */,
 				8340194F181D926D006E4D78 /* main.m in Sources */,

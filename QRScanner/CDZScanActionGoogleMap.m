@@ -1,29 +1,31 @@
 //
-//  CDZScanActionMap.m
+//  CDZScanActionGoogleMap.m
 //  QRScanner
 //
 //  Created by Chris Dzombak on 10/27/13.
 //  Copyright (c) 2013 Chris Dzombak. All rights reserved.
 //
 
-#import "CDZScanActionMap.h"
+#import "CDZScanActionGoogleMap.h"
 #import "NSString+URLEncoding.h"
 
-@interface CDZScanActionMap ()
+@interface CDZScanActionGoogleMap ()
 
 @property (nonatomic, strong) NSDictionary *matchComponents;
 
 @end
 
-@implementation CDZScanActionMap
+@implementation CDZScanActionGoogleMap
 
 + (CDZScanAction *)actionForString:(NSString *)string {
+    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"comgooglemaps://"]]) return nil;
+
     NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeAddress error:nil];
     NSTextCheckingResult *result = [detector firstMatchInString:string options:0 range:NSMakeRange(0, string.length)];
 
     if (!result) return nil;
 
-    CDZScanActionMap *action = [[[self class] alloc] init];
+    CDZScanActionGoogleMap *action = [[[self class] alloc] init];
     action.matchComponents = result.addressComponents;
     return action;
 }
@@ -58,7 +60,7 @@
 }
 
 - (void)takeAction {
-    NSString *urlString = [NSString stringWithFormat:@"http://maps.apple.com/?q=%@", [self queryFromMatchComponents:self.matchComponents]];
+    NSString *urlString = [NSString stringWithFormat:@"comgooglemaps://?q=%@", [self queryFromMatchComponents:self.matchComponents]];
     NSURL *url = [NSURL URLWithString:urlString];
     [[UIApplication sharedApplication] openURL:url];
 }
