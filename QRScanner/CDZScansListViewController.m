@@ -48,6 +48,21 @@
         cell.textLabel.text = scan.text;
     };
     self.dataSource.tableView = self.tableView;
+    self.dataSource.fallbackTableDataSource = self;
+}
+
+#pragma mark - UITableViewDataSource
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        CDZQRScan *scan = [self.dataSource itemAtIndexPath:indexPath];
+        [self.dataController deleteScan:scan];
+        
+    }
+}
+
+- (bool)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
 }
 
 #pragma mark - Property Overrides

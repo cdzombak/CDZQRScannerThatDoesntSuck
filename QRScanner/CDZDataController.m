@@ -12,6 +12,8 @@
 
 #import "NSManagedObject+CDZAdditions.h"
 
+typedef void(^CDZPersistenceBackgroundBlockWithObjects)(NSManagedObjectContext *context, NSArray *objects);
+
 @interface CDZDataController ()
 
 @property (nonatomic, readwrite, strong) NSManagedObjectContext *coreDataContext;
@@ -71,6 +73,30 @@
     }];
 }
 
+- (void)processObjects:(NSArray *)managedObjects inBackgroundWithBlock:(CDZPersistenceBackgroundBlockWithObjects)block {
+    NSError *error;
+    if (managedObjects.count > 0 && ![[managedObjects.firstObject managedObjectContext] obtainPermanentIDsForObjects:managedObjects error:&error]) {
+        NSLog(@"Error obtaining permanent IDs for objects: %@", error);
+    }
+
+    NSArray *objectIDs = [managedObjects valueForKey:@"objectID"];
+    [self processObjectsWithIDs:objectIDs inBackgroundWithBlock:block];
+}
+
+- (void)processObjectsWithIDs:(NSArray *)managedObjectIDs inBackgroundWithBlock:(CDZPersistenceBackgroundBlockWithObjects)block {
+    NSManagedObjectContext *context = [self temporaryBackgroundContext];
+    [context performBlock:^{
+        NSMutableArray *refetchedManagedObjects = [[NSMutableArray alloc] init];
+        for (NSManagedObjectID *objectID in managedObjectIDs) {
+            id object = [context existingObjectWithID:objectID error:NULL];
+            if (object) {
+                [refetchedManagedObjects addObject:object];
+            }
+        }
+        block(context, refetchedManagedObjects);
+    }];
+}
+
 #pragma mark - Public API
 
 - (void)addScanWithText:(NSString *)scanText {
@@ -82,6 +108,20 @@
         if (error) {
             NSLog(@"Core Data error while saving scan: %@", error);
         }
+    }];
+}
+
+- (void)deleteScan:(CDZQRScan *)_scan {
+    [self processObjects:@[_scan] inBackgroundWithBlock:^(NSManagedObjectContext *context, NSArray *objects) {
+        for (NSManagedObject *object in objects) {
+            [context deleteObject:object];
+        }
+
+        [self persistChangesInContext:context completionHandler:^(NSError *error) {
+            if (error) {
+                NSLog(@"Core Data error while deleting scan: %@", error);
+            }
+        }];
     }];
 }
 

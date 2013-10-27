@@ -16,5 +16,6 @@
 - (instancetype)init;
 
 - (void)addScanWithText:(NSString *)scanText;
+- (void)deleteScan:(CDZQRScan *)scan;
 
 @end
