@@ -41,7 +41,8 @@
             return nil;
         }
 
-        self.coreDataContext= [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        self.coreDataContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        [self.coreDataContext setPersistentStoreCoordinator:self.coordinator];
     }
     return self;
 }
