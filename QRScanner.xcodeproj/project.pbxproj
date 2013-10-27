@@ -22,6 +22,8 @@
 		83401962181D926D006E4D78 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83401946181D926D006E4D78 /* CoreData.framework */; };
 		8340196A181D926D006E4D78 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83401968181D926D006E4D78 /* InfoPlist.strings */; };
 		8340196C181D926D006E4D78 /* QRScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340196B181D926D006E4D78 /* QRScannerTests.m */; };
+		83401977181D967E006E4D78 /* CDZScansListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83401976181D967E006E4D78 /* CDZScansListViewController.m */; };
+		8340197B181D97FD006E4D78 /* CDZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340197A181D97FD006E4D78 /* CDZRootViewController.m */; };
 		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,10 @@
 		83401967181D926D006E4D78 /* QRScannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QRScannerTests-Info.plist"; sourceTree = "<group>"; };
 		83401969181D926D006E4D78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8340196B181D926D006E4D78 /* QRScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRScannerTests.m; sourceTree = "<group>"; };
+		83401975181D967E006E4D78 /* CDZScansListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScansListViewController.h; sourceTree = "<group>"; };
+		83401976181D967E006E4D78 /* CDZScansListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScansListViewController.m; sourceTree = "<group>"; };
+		83401979181D97FD006E4D78 /* CDZRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZRootViewController.h; sourceTree = "<group>"; };
+		8340197A181D97FD006E4D78 /* CDZRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZRootViewController.m; sourceTree = "<group>"; };
 		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,6 +129,7 @@
 			children = (
 				83401951181D926D006E4D78 /* CDZAppDelegate.h */,
 				83401952181D926D006E4D78 /* CDZAppDelegate.m */,
+				83401978181D9686006E4D78 /* View Controllers */,
 				83401954181D926D006E4D78 /* QRScanner.xcdatamodeld */,
 				83401957181D926D006E4D78 /* Images.xcassets */,
 				83401949181D926D006E4D78 /* Supporting Files */,
@@ -157,6 +164,17 @@
 				83401968181D926D006E4D78 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83401978181D9686006E4D78 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83401979181D97FD006E4D78 /* CDZRootViewController.h */,
+				8340197A181D97FD006E4D78 /* CDZRootViewController.m */,
+				83401975181D967E006E4D78 /* CDZScansListViewController.h */,
+				83401976181D967E006E4D78 /* CDZScansListViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +311,8 @@
 				83401953181D926D006E4D78 /* CDZAppDelegate.m in Sources */,
 				83401956181D926D006E4D78 /* QRScanner.xcdatamodeld in Sources */,
 				8340194F181D926D006E4D78 /* main.m in Sources */,
+				83401977181D967E006E4D78 /* CDZScansListViewController.m in Sources */,
+				8340197B181D97FD006E4D78 /* CDZRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

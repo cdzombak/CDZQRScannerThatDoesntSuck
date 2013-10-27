@@ -8,6 +8,8 @@
 
 #import "CDZAppDelegate.h"
 
+#import "CDZRootViewController.h"
+
 @implementation CDZAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -17,9 +19,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor redColor];
+
+    CDZRootViewController *rootVC = [[CDZRootViewController alloc] init];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:rootVC];
+
+    self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 
