@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		8340197F181DAAB7006E4D78 /* mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 83401980181DAAB8006E4D78 /* Build configuration list for PBXAggregateTarget "mogenerator" */;
+			buildPhases = (
+				83401985181DAB0A006E4D78 /* Generate Model Classes */,
+			);
+			dependencies = (
+			);
+			name = mogenerator;
+			productName = mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		83401941181D926D006E4D78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83401940181D926D006E4D78 /* Foundation.framework */; };
 		83401943181D926D006E4D78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83401942181D926D006E4D78 /* CoreGraphics.framework */; };
@@ -24,6 +38,8 @@
 		8340196C181D926D006E4D78 /* QRScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340196B181D926D006E4D78 /* QRScannerTests.m */; };
 		83401977181D967E006E4D78 /* CDZScansListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83401976181D967E006E4D78 /* CDZScansListViewController.m */; };
 		8340197B181D97FD006E4D78 /* CDZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340197A181D97FD006E4D78 /* CDZRootViewController.m */; };
+		8340198C181DACD4006E4D78 /* CDZQRScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 83401988181DACD4006E4D78 /* CDZQRScan.m */; };
+		8340198D181DACD4006E4D78 /* _CDZQRScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340198B181DACD4006E4D78 /* _CDZQRScan.m */; };
 		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +50,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8340193C181D926D006E4D78;
 			remoteInfo = QRScanner;
+		};
+		83401983181DAB02006E4D78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83401935181D926D006E4D78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8340197F181DAAB7006E4D78;
+			remoteInfo = mogenerator;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,6 +84,10 @@
 		83401976181D967E006E4D78 /* CDZScansListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScansListViewController.m; sourceTree = "<group>"; };
 		83401979181D97FD006E4D78 /* CDZRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZRootViewController.h; sourceTree = "<group>"; };
 		8340197A181D97FD006E4D78 /* CDZRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZRootViewController.m; sourceTree = "<group>"; };
+		83401987181DACD4006E4D78 /* CDZQRScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZQRScan.h; sourceTree = "<group>"; };
+		83401988181DACD4006E4D78 /* CDZQRScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZQRScan.m; sourceTree = "<group>"; };
+		8340198A181DACD4006E4D78 /* _CDZQRScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDZQRScan.h; sourceTree = "<group>"; };
+		8340198B181DACD4006E4D78 /* _CDZQRScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDZQRScan.m; sourceTree = "<group>"; };
 		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +156,7 @@
 			children = (
 				83401951181D926D006E4D78 /* CDZAppDelegate.h */,
 				83401952181D926D006E4D78 /* CDZAppDelegate.m */,
+				83401986181DACD4006E4D78 /* Model */,
 				83401978181D9686006E4D78 /* View Controllers */,
 				83401954181D926D006E4D78 /* QRScanner.xcdatamodeld */,
 				83401957181D926D006E4D78 /* Images.xcassets */,
@@ -177,6 +205,25 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		83401986181DACD4006E4D78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83401987181DACD4006E4D78 /* CDZQRScan.h */,
+				83401988181DACD4006E4D78 /* CDZQRScan.m */,
+				83401989181DACD4006E4D78 /* Generated */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83401989181DACD4006E4D78 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				8340198A181DACD4006E4D78 /* _CDZQRScan.h */,
+				8340198B181DACD4006E4D78 /* _CDZQRScan.m */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,6 +240,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				83401984181DAB02006E4D78 /* PBXTargetDependency */,
 			);
 			name = QRScanner;
 			productName = QRScanner;
@@ -246,6 +294,7 @@
 			targets = (
 				8340193C181D926D006E4D78 /* QRScanner */,
 				8340195C181D926D006E4D78 /* QRScannerTests */,
+				8340197F181DAAB7006E4D78 /* mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -271,6 +320,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		83401985181DAB0A006E4D78 /* Generate Model Classes */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Model Classes";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH\":/usr/local/bin\n\nif [[ -f $(which mogenerator) ]]; then\n    /usr/bin/env mogenerator \\\n        --model \"QRScanner/QRScanner.xcdatamodeld\" \\\n        --machine-dir \"QRScanner/Model/Generated\" \\\n        --human-dir \"QRScanner/Model\" \\\n        --template-var arc=true\nfi";
+			showEnvVarsInLog = 0;
+		};
 		DF3D34F5929E4BD5B0AF212A /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,8 +375,10 @@
 				83401953181D926D006E4D78 /* CDZAppDelegate.m in Sources */,
 				83401956181D926D006E4D78 /* QRScanner.xcdatamodeld in Sources */,
 				8340194F181D926D006E4D78 /* main.m in Sources */,
+				8340198C181DACD4006E4D78 /* CDZQRScan.m in Sources */,
 				83401977181D967E006E4D78 /* CDZScansListViewController.m in Sources */,
 				8340197B181D97FD006E4D78 /* CDZRootViewController.m in Sources */,
+				8340198D181DACD4006E4D78 /* _CDZQRScan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +397,11 @@
 			isa = PBXTargetDependency;
 			target = 8340193C181D926D006E4D78 /* QRScanner */;
 			targetProxy = 83401963181D926D006E4D78 /* PBXContainerItemProxy */;
+		};
+		83401984181DAB02006E4D78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8340197F181DAAB7006E4D78 /* mogenerator */;
+			targetProxy = 83401983181DAB02006E4D78 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -530,6 +601,20 @@
 			};
 			name = Release;
 		};
+		83401981181DAAB8006E4D78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83401982181DAAB8006E4D78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -559,6 +644,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		83401980181DAAB8006E4D78 /* Build configuration list for PBXAggregateTarget "mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83401981181DAAB8006E4D78 /* Debug */,
+				83401982181DAAB8006E4D78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
