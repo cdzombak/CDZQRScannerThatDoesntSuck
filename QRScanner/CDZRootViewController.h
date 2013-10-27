@@ -8,4 +8,7 @@
 
 @interface CDZRootViewController : UIViewController
 
+/// Designated initializer
+- (instancetype)init;
+
 @end

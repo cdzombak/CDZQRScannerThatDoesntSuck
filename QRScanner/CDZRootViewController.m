@@ -24,6 +24,14 @@
             scansListVC = _scansListVC
             ;
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.title = NSLocalizedString(@"QR Scanner", nil);
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
