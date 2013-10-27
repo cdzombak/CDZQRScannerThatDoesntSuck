@@ -1,0 +1,14 @@
+PODS:
+  - CDZQRScanningViewController (1.0.1)
+
+DEPENDENCIES:
+  - CDZQRScanningViewController (from `https://raw.github.com/cdzombak/CDZQRScanningViewController/master/CDZQRScanningViewController.podspec`)
+
+EXTERNAL SOURCES:
+  CDZQRScanningViewController:
+    :podspec: https://raw.github.com/cdzombak/CDZQRScanningViewController/master/CDZQRScanningViewController.podspec
+
+SPEC CHECKSUMS:
+  CDZQRScanningViewController: 6983d9f3ebb0386f76e5a5b49dc3f8deb8cda318
+
+COCOAPODS: 0.27.1

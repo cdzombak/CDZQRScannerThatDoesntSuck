@@ -22,6 +22,7 @@
 		83401962181D926D006E4D78 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83401946181D926D006E4D78 /* CoreData.framework */; };
 		8340196A181D926D006E4D78 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83401968181D926D006E4D78 /* InfoPlist.strings */; };
 		8340196C181D926D006E4D78 /* QRScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340196B181D926D006E4D78 /* QRScannerTests.m */; };
+		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7FB1D3A74F75425C94DB9AAD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8340193D181D926D006E4D78 /* QRScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83401940181D926D006E4D78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83401942181D926D006E4D78 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +55,7 @@
 		83401967181D926D006E4D78 /* QRScannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QRScannerTests-Info.plist"; sourceTree = "<group>"; };
 		83401969181D926D006E4D78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8340196B181D926D006E4D78 /* QRScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRScannerTests.m; sourceTree = "<group>"; };
+		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 				83401947181D926D006E4D78 /* CoreData.framework in Frameworks */,
 				83401945181D926D006E4D78 /* UIKit.framework in Frameworks */,
 				83401941181D926D006E4D78 /* Foundation.framework in Frameworks */,
+				F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +92,7 @@
 				83401965181D926D006E4D78 /* QRScannerTests */,
 				8340193F181D926D006E4D78 /* Frameworks */,
 				8340193E181D926D006E4D78 /* Products */,
+				7FB1D3A74F75425C94DB9AAD /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +113,7 @@
 				83401944181D926D006E4D78 /* UIKit.framework */,
 				83401946181D926D006E4D78 /* CoreData.framework */,
 				8340195E181D926D006E4D78 /* XCTest.framework */,
+				ECBA172A05E94DC4A2964F0E /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8340196F181D926D006E4D78 /* Build configuration list for PBXNativeTarget "QRScanner" */;
 			buildPhases = (
+				DF3D34F5929E4BD5B0AF212A /* Check Pods Manifest.lock */,
 				83401939181D926D006E4D78 /* Sources */,
 				8340193A181D926D006E4D78 /* Frameworks */,
 				8340193B181D926D006E4D78 /* Resources */,
+				EF303859474B4A1195D473EA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,6 +251,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DF3D34F5929E4BD5B0AF212A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF303859474B4A1195D473EA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83401939181D926D006E4D78 /* Sources */ = {
@@ -401,6 +442,7 @@
 		};
 		83401970181D926D006E4D78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FB1D3A74F75425C94DB9AAD /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -414,6 +456,7 @@
 		};
 		83401971181D926D006E4D78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FB1D3A74F75425C94DB9AAD /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -486,6 +529,7 @@
 				83401971181D926D006E4D78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83401972181D926D006E4D78 /* Build configuration list for PBXNativeTarget "QRScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +538,7 @@
 				83401974181D926D006E4D78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
