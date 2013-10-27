@@ -45,7 +45,8 @@
                                            CDZQRScan *scan,
                                            UITableView *tableView,
                                            NSIndexPath *indexPath) {
-        cell.textLabel.text = scan.text;
+        NSString *trimmedText = [[scan.text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@" "];
+        cell.textLabel.text = trimmedText;
     };
     self.dataSource.tableView = self.tableView;
     self.dataSource.fallbackTableDataSource = self;
