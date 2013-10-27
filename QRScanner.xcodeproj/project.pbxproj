@@ -38,8 +38,10 @@
 		8340196C181D926D006E4D78 /* QRScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340196B181D926D006E4D78 /* QRScannerTests.m */; };
 		83401977181D967E006E4D78 /* CDZScansListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83401976181D967E006E4D78 /* CDZScansListViewController.m */; };
 		8340197B181D97FD006E4D78 /* CDZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340197A181D97FD006E4D78 /* CDZRootViewController.m */; };
+		8340197E181DAA68006E4D78 /* CDZDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340197D181DAA68006E4D78 /* CDZDataController.m */; };
 		8340198C181DACD4006E4D78 /* CDZQRScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 83401988181DACD4006E4D78 /* CDZQRScan.m */; };
 		8340198D181DACD4006E4D78 /* _CDZQRScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340198B181DACD4006E4D78 /* _CDZQRScan.m */; };
+		83401991181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 83401990181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.m */; };
 		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -84,10 +86,14 @@
 		83401976181D967E006E4D78 /* CDZScansListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScansListViewController.m; sourceTree = "<group>"; };
 		83401979181D97FD006E4D78 /* CDZRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZRootViewController.h; sourceTree = "<group>"; };
 		8340197A181D97FD006E4D78 /* CDZRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZRootViewController.m; sourceTree = "<group>"; };
+		8340197C181DAA68006E4D78 /* CDZDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZDataController.h; sourceTree = "<group>"; };
+		8340197D181DAA68006E4D78 /* CDZDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZDataController.m; sourceTree = "<group>"; };
 		83401987181DACD4006E4D78 /* CDZQRScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZQRScan.h; sourceTree = "<group>"; };
 		83401988181DACD4006E4D78 /* CDZQRScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZQRScan.m; sourceTree = "<group>"; };
 		8340198A181DACD4006E4D78 /* _CDZQRScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDZQRScan.h; sourceTree = "<group>"; };
 		8340198B181DACD4006E4D78 /* _CDZQRScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDZQRScan.m; sourceTree = "<group>"; };
+		8340198F181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CDZAdditions.h"; sourceTree = "<group>"; };
+		83401990181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+CDZAdditions.m"; sourceTree = "<group>"; };
 		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,8 +162,11 @@
 			children = (
 				83401951181D926D006E4D78 /* CDZAppDelegate.h */,
 				83401952181D926D006E4D78 /* CDZAppDelegate.m */,
+				8340197C181DAA68006E4D78 /* CDZDataController.h */,
+				8340197D181DAA68006E4D78 /* CDZDataController.m */,
 				83401986181DACD4006E4D78 /* Model */,
 				83401978181D9686006E4D78 /* View Controllers */,
+				8340198E181DB1D2006E4D78 /* Categories */,
 				83401954181D926D006E4D78 /* QRScanner.xcdatamodeld */,
 				83401957181D926D006E4D78 /* Images.xcassets */,
 				83401949181D926D006E4D78 /* Supporting Files */,
@@ -222,6 +231,15 @@
 				8340198B181DACD4006E4D78 /* _CDZQRScan.m */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		8340198E181DB1D2006E4D78 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8340198F181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.h */,
+				83401990181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,10 +393,12 @@
 				83401953181D926D006E4D78 /* CDZAppDelegate.m in Sources */,
 				83401956181D926D006E4D78 /* QRScanner.xcdatamodeld in Sources */,
 				8340194F181D926D006E4D78 /* main.m in Sources */,
+				8340197E181DAA68006E4D78 /* CDZDataController.m in Sources */,
 				8340198C181DACD4006E4D78 /* CDZQRScan.m in Sources */,
 				83401977181D967E006E4D78 /* CDZScansListViewController.m in Sources */,
 				8340197B181D97FD006E4D78 /* CDZRootViewController.m in Sources */,
 				8340198D181DACD4006E4D78 /* _CDZQRScan.m in Sources */,
+				83401991181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

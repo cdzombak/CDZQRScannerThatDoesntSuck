@@ -8,6 +8,8 @@
 
 #import "CDZRootViewController.h"
 
+#import "CDZDataController.h"
+
 #import "CDZQRScanningViewController.h"
 #import "CDZScansListViewController.h"
 
@@ -26,10 +28,11 @@
             separatorView = _separatorView
             ;
 
-- (instancetype)init {
+- (instancetype)initWithDataController:(CDZDataController *)dataController {
     self = [super init];
     if (self) {
         self.title = NSLocalizedString(@"QR Scanner", nil);
+        self.dataController = dataController;
     }
     return self;
 }
@@ -84,6 +87,11 @@
     self.separatorView.frame = separatorFrame;
 }
 
+- (void)didScanQRCodeWithResult:(NSString *)result {
+    [self.dataController addScanWithText:result];
+    [[UIPasteboard generalPasteboard] setString:result];
+}
+
 #pragma mark - Property Overrides
 
 - (UIViewController *)scannerVC {
@@ -98,7 +106,7 @@
              show];
         };
         vc.resultBlock = ^(NSString *result) {
-            NSLog(@"scanned %@", result);
+            [self didScanQRCodeWithResult:result];
         };
         _scannerVC = vc;
     }

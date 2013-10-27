@@ -6,9 +6,13 @@
 //  Copyright (c) 2013 Chris Dzombak. All rights reserved.
 //
 
+@class CDZDataController;
+
 @interface CDZRootViewController : UIViewController
 
+@property (nonatomic, strong) CDZDataController *dataController;
+
 /// Designated initializer
-- (instancetype)init;
+- (instancetype)initWithDataController:(CDZDataController *)dataController;
 
 @end
