@@ -2,7 +2,12 @@
 
 ## Dev
 
-Run `script/bootstrap`. It will set up CocoaPods for this project. Its only external dependency is bundler.
+Run `script/bootstrap`. It will set up CocoaPods and configure your environment as needed.
+
+External depencies:
+
+* Ruby + bundler
+* Homebrew
 
 ## Requirements
 

@@ -5,5 +5,9 @@
 SCRIPT_DIR=$(dirname "$0")
 cd "$SCRIPT_DIR/.."
 
+if [[ ! -f $(which mogenerator) ]]; then
+    brew install mogenerator
+fi
+
 bundle install --binstubs --path Vendor/bundle
 bundle exec pod install
