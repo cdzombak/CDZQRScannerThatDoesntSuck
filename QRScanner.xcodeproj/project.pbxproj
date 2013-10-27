@@ -46,6 +46,8 @@
 		8340199B181DC39D006E4D78 /* CDZScanActionCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340199A181DC39D006E4D78 /* CDZScanActionCall.m */; };
 		8340199E181DCC6C006E4D78 /* CDZScanActionCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340199D181DCC6C006E4D78 /* CDZScanActionCopy.m */; };
 		834019A1181DCD4A006E4D78 /* CDZScanActionText.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019A0181DCD4A006E4D78 /* CDZScanActionText.m */; };
+		834019A6181DD127006E4D78 /* CDZScanActionMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019A5181DD127006E4D78 /* CDZScanActionMap.m */; };
+		834019A9181DD5CC006E4D78 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019A8181DD5CC006E4D78 /* NSString+URLEncoding.m */; };
 		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +108,10 @@
 		8340199D181DCC6C006E4D78 /* CDZScanActionCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionCopy.m; sourceTree = "<group>"; };
 		8340199F181DCD4A006E4D78 /* CDZScanActionText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionText.h; sourceTree = "<group>"; };
 		834019A0181DCD4A006E4D78 /* CDZScanActionText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionText.m; sourceTree = "<group>"; };
+		834019A4181DD127006E4D78 /* CDZScanActionMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionMap.h; sourceTree = "<group>"; };
+		834019A5181DD127006E4D78 /* CDZScanActionMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionMap.m; sourceTree = "<group>"; };
+		834019A7181DD5CC006E4D78 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		834019A8181DD5CC006E4D78 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -253,6 +259,8 @@
 			children = (
 				8340198F181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.h */,
 				83401990181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.m */,
+				834019A7181DD5CC006E4D78 /* NSString+URLEncoding.h */,
+				834019A8181DD5CC006E4D78 /* NSString+URLEncoding.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -266,6 +274,8 @@
 				8340199D181DCC6C006E4D78 /* CDZScanActionCopy.m */,
 				8340199F181DCD4A006E4D78 /* CDZScanActionText.h */,
 				834019A0181DCD4A006E4D78 /* CDZScanActionText.m */,
+				834019A4181DD127006E4D78 /* CDZScanActionMap.h */,
+				834019A5181DD127006E4D78 /* CDZScanActionMap.m */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -418,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				834019A9181DD5CC006E4D78 /* NSString+URLEncoding.m in Sources */,
 				83401953181D926D006E4D78 /* CDZAppDelegate.m in Sources */,
 				83401956181D926D006E4D78 /* QRScanner.xcdatamodeld in Sources */,
 				8340199B181DC39D006E4D78 /* CDZScanActionCall.m in Sources */,
@@ -427,6 +438,7 @@
 				83401977181D967E006E4D78 /* CDZScansListViewController.m in Sources */,
 				83401997181DC21C006E4D78 /* CDZScanAction.m in Sources */,
 				8340197B181D97FD006E4D78 /* CDZRootViewController.m in Sources */,
+				834019A6181DD127006E4D78 /* CDZScanActionMap.m in Sources */,
 				8340199E181DCC6C006E4D78 /* CDZScanActionCopy.m in Sources */,
 				834019A1181DCD4A006E4D78 /* CDZScanActionText.m in Sources */,
 				8340198D181DACD4006E4D78 /* _CDZQRScan.m in Sources */,

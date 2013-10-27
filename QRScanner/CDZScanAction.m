@@ -11,6 +11,7 @@
 #import "CDZScanActionCall.h"
 #import "CDZScanActionCopy.h"
 #import "CDZScanActionText.h"
+#import "CDZScanActionMap.h"
 
 @implementation CDZScanAction
 
@@ -39,6 +40,7 @@
                     [CDZScanActionCopy class],
                     [CDZScanActionCall class],
                     [CDZScanActionText class],
+                    [CDZScanActionMap class],
                     ];
     });
     return classes;
