@@ -44,6 +44,7 @@
 		83401991181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 83401990181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.m */; };
 		83401997181DC21C006E4D78 /* CDZScanAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 83401996181DC21C006E4D78 /* CDZScanAction.m */; };
 		8340199B181DC39D006E4D78 /* CDZScanActionCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340199A181DC39D006E4D78 /* CDZScanActionCall.m */; };
+		8340199E181DCC6C006E4D78 /* CDZScanActionCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8340199D181DCC6C006E4D78 /* CDZScanActionCopy.m */; };
 		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,8 @@
 		83401996181DC21C006E4D78 /* CDZScanAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanAction.m; sourceTree = "<group>"; };
 		83401999181DC39D006E4D78 /* CDZScanActionCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionCall.h; sourceTree = "<group>"; };
 		8340199A181DC39D006E4D78 /* CDZScanActionCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionCall.m; sourceTree = "<group>"; };
+		8340199C181DCC6C006E4D78 /* CDZScanActionCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionCopy.h; sourceTree = "<group>"; };
+		8340199D181DCC6C006E4D78 /* CDZScanActionCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionCopy.m; sourceTree = "<group>"; };
 		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -256,6 +259,8 @@
 			children = (
 				83401999181DC39D006E4D78 /* CDZScanActionCall.h */,
 				8340199A181DC39D006E4D78 /* CDZScanActionCall.m */,
+				8340199C181DCC6C006E4D78 /* CDZScanActionCopy.h */,
+				8340199D181DCC6C006E4D78 /* CDZScanActionCopy.m */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				83401977181D967E006E4D78 /* CDZScansListViewController.m in Sources */,
 				83401997181DC21C006E4D78 /* CDZScanAction.m in Sources */,
 				8340197B181D97FD006E4D78 /* CDZRootViewController.m in Sources */,
+				8340199E181DCC6C006E4D78 /* CDZScanActionCopy.m in Sources */,
 				8340198D181DACD4006E4D78 /* _CDZQRScan.m in Sources */,
 				83401991181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.m in Sources */,
 			);

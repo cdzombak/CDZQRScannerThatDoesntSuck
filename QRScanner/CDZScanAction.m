@@ -9,6 +9,7 @@
 #import "CDZScanAction.h"
 
 #import "CDZScanActionCall.h"
+#import "CDZScanActionCopy.h"
 
 @implementation CDZScanAction
 
@@ -34,6 +35,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         classes = @[
+                    [CDZScanActionCopy class],
                     [CDZScanActionCall class]
                     ];
     });
