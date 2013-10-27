@@ -15,13 +15,15 @@
 
 @property (nonatomic, readonly) UIViewController *scannerVC;
 @property (nonatomic, readonly) UIViewController *scansListVC;
+@property (nonatomic, readonly) UIView *separatorView;
 
 @end
 
 @implementation CDZRootViewController
 
 @synthesize scannerVC = _scannerVC,
-            scansListVC = _scansListVC
+            scansListVC = _scansListVC,
+            separatorView = _separatorView
             ;
 
 - (instancetype)init {
@@ -49,6 +51,8 @@
     [self addChildViewController:self.scansListVC];
     [self.view addSubview:self.scansListVC.view];
     [self.scansListVC didMoveToParentViewController:self];
+
+    [self.view addSubview:self.separatorView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -70,8 +74,14 @@
         .size = CGSizeMake(CGRectGetWidth(self.view.bounds), 0.45f*CGRectGetHeight(self.view.bounds))
     };
 
+    CGRect separatorFrame = (CGRect) {
+        .origin = CGPointMake(0, CGRectGetMaxY(scannerFrame)),
+        .size = CGSizeMake(CGRectGetWidth(self.view.bounds), 1.0f/[[UIScreen mainScreen] scale])
+    };
+
     self.scannerVC.view.frame = scannerFrame;
     self.scansListVC.view.frame = listFrame;
+    self.separatorView.frame = separatorFrame;
 }
 
 #pragma mark - Property Overrides
@@ -101,6 +111,14 @@
         _scansListVC = vc;
     }
     return _scansListVC;
+}
+
+- (UIView *)separatorView {
+    if (!_separatorView) {
+        _separatorView = [[UIView alloc] initWithFrame:CGRectZero];
+        _separatorView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.9];
+    }
+    return _separatorView;
 }
 
 @end
