@@ -115,7 +115,7 @@
 
 - (UIViewController *)scansListVC {
     if (!_scansListVC) {
-        CDZScansListViewController *vc = [[CDZScansListViewController alloc] init];
+        CDZScansListViewController *vc = [[CDZScansListViewController alloc] initWithDataController:self.dataController];
         _scansListVC = vc;
     }
     return _scansListVC;

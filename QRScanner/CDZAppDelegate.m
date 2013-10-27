@@ -26,7 +26,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor redColor];
 
-    CDZRootViewController *rootVC = [[CDZRootViewController alloc] init];
+    CDZRootViewController *rootVC = [[CDZRootViewController alloc] initWithDataController:self.dataController];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:rootVC];
 
     self.window.rootViewController = navVC;
@@ -39,7 +39,7 @@
 
 - (CDZDataController *)dataController {
     if (!_dataController) {
-        _dataController = [CDZDataController new];
+        _dataController = [[CDZDataController alloc] init];
     }
     return _dataController;
 }

@@ -8,16 +8,29 @@
 
 #import "CDZScansListViewController.h"
 
-@interface CDZScansListViewController ()
+#import <SSDataSources/SSDataSources.h>
+#import "CDZDataController.h"
+#import "CDZQRScan.h"
+
+#import "NSManagedObject+CDZAdditions.h"
+
+@interface CDZScansListViewController () <NSFetchedResultsControllerDelegate>
+
+@property (nonatomic, strong) SSCoreDataSource *dataSource;
+@property (nonatomic, readonly) NSFetchRequest *fetchRequest;
 
 @end
 
 @implementation CDZScansListViewController
 
-- (id)init
+@synthesize fetchRequest = _fetchRequest;
+
+- (instancetype)initWithDataController:(CDZDataController *)dataController
 {
     self = [super initWithStyle:UITableViewStylePlain];
-    if (self) { }
+    if (self) {
+        self.dataController = dataController;
+    }
     return self;
 }
 
@@ -25,89 +38,26 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.allowsSelection = YES;
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    self.dataSource = [[SSCoreDataSource alloc] initWithFetchRequest:self.fetchRequest inContext:self.dataController.coreDataContext sectionNameKeyPath:nil];
+    self.dataSource.cellConfigureBlock = ^(SSBaseTableCell *cell,
+                                           CDZQRScan *scan,
+                                           UITableView *tableView,
+                                           NSIndexPath *indexPath) {
+        cell.textLabel.text = scan.text;
+    };
+    self.dataSource.tableView = self.tableView;
 }
 
-#pragma mark - Table view data source
+#pragma mark - Property Overrides
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
+- (NSFetchRequest *)fetchRequest {
+    if (!_fetchRequest) {
+        _fetchRequest = [[NSFetchRequest alloc] initWithEntityName:[CDZQRScan cdz_entityName]];
+        _fetchRequest.sortDescriptors = @[ [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO] ];
+    }
+    return _fetchRequest;
 }
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 20;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-
-    cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row];
-    
-    return cell;
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end
