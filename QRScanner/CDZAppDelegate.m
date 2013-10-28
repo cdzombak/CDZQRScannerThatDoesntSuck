@@ -11,6 +11,8 @@
 #import "CDZDataController.h"
 #import "CDZRootViewController.h"
 
+#import <BugSense-iOS/BugSenseController.h>
+
 @interface CDZAppDelegate ()
 
 @property (nonatomic, readonly) CDZDataController *dataController;
@@ -23,6 +25,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [BugSenseController sharedControllerWithBugSenseAPIKey:@"b70515f3"];
+    [BugSenseController setLogMessagesCount:10];
+    [BugSenseController setLogMessagesLevel:8];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor blackColor];
 

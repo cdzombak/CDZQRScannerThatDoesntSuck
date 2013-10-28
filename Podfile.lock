@@ -1,8 +1,10 @@
 PODS:
+  - BugSense (3.5.1)
   - CDZQRScanningViewController (1.0.1)
   - SSDataSources (0.3.3-fake)
 
 DEPENDENCIES:
+  - BugSense
   - CDZQRScanningViewController (from `https://raw.github.com/cdzombak/CDZQRScanningViewController/master/CDZQRScanningViewController.podspec`)
   - SSDataSources (from `Vendor/podspecs/SSDataSources.podspec`)
 
@@ -13,6 +15,7 @@ EXTERNAL SOURCES:
     :podspec: Vendor/podspecs/SSDataSources.podspec
 
 SPEC CHECKSUMS:
+  BugSense: d6c7be4f7edef7ac0d3867a0aa83bc339587a9b2
   CDZQRScanningViewController: 6983d9f3ebb0386f76e5a5b49dc3f8deb8cda318
   SSDataSources: 3983207ed90c9f3cf163093810da0a3a82b51e5a
 
