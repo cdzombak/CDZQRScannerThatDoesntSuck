@@ -50,6 +50,7 @@
 		834019A9181DD5CC006E4D78 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019A8181DD5CC006E4D78 /* NSString+URLEncoding.m */; };
 		834019AC181DD6B1006E4D78 /* CDZScanActionGoogleMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019AB181DD6B1006E4D78 /* CDZScanActionGoogleMap.m */; };
 		834019AF181E077F006E4D78 /* CDZScanActionFantasticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019AE181E077F006E4D78 /* CDZScanActionFantasticalView.m */; };
+		834019B2181E0A4D006E4D78 /* CDZScanActionFantasticalParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019B1181E0A4D006E4D78 /* CDZScanActionFantasticalParse.m */; };
 		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,8 @@
 		834019AB181DD6B1006E4D78 /* CDZScanActionGoogleMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionGoogleMap.m; sourceTree = "<group>"; };
 		834019AD181E077F006E4D78 /* CDZScanActionFantasticalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionFantasticalView.h; sourceTree = "<group>"; };
 		834019AE181E077F006E4D78 /* CDZScanActionFantasticalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionFantasticalView.m; sourceTree = "<group>"; };
+		834019B0181E0A4D006E4D78 /* CDZScanActionFantasticalParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionFantasticalParse.h; sourceTree = "<group>"; };
+		834019B1181E0A4D006E4D78 /* CDZScanActionFantasticalParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionFantasticalParse.m; sourceTree = "<group>"; };
 		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -286,6 +289,8 @@
 				834019AB181DD6B1006E4D78 /* CDZScanActionGoogleMap.m */,
 				834019AD181E077F006E4D78 /* CDZScanActionFantasticalView.h */,
 				834019AE181E077F006E4D78 /* CDZScanActionFantasticalView.m */,
+				834019B0181E0A4D006E4D78 /* CDZScanActionFantasticalParse.h */,
+				834019B1181E0A4D006E4D78 /* CDZScanActionFantasticalParse.m */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				834019AC181DD6B1006E4D78 /* CDZScanActionGoogleMap.m in Sources */,
 				83401956181D926D006E4D78 /* QRScanner.xcdatamodeld in Sources */,
 				8340199B181DC39D006E4D78 /* CDZScanActionCall.m in Sources */,
+				834019B2181E0A4D006E4D78 /* CDZScanActionFantasticalParse.m in Sources */,
 				8340194F181D926D006E4D78 /* main.m in Sources */,
 				8340197E181DAA68006E4D78 /* CDZDataController.m in Sources */,
 				8340198C181DACD4006E4D78 /* CDZQRScan.m in Sources */,
