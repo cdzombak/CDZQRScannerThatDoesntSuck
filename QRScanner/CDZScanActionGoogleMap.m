@@ -66,7 +66,7 @@
 }
 
 - (NSString *)localizedActionName {
-    return NSLocalizedString(@"Map", nil);
+    return NSLocalizedString(@"Google Maps", nil);
 }
 
 @end
