@@ -30,6 +30,7 @@
 
 + (BOOL)isURLHttp:(NSURL *)url {
     NSString *schemeLowerCase = [url.scheme lowercaseString];
+    if (schemeLowerCase.length < 4) return NO;
     return [[schemeLowerCase substringWithRange:NSMakeRange(0, 4)] isEqualToString:@"http"];
 }
 
