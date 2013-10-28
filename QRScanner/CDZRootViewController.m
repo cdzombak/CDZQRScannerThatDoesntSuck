@@ -9,15 +9,20 @@
 #import "CDZRootViewController.h"
 
 #import "CDZDataController.h"
+#import "CDZScanAction.h"
 
 #import "CDZQRScanningViewController.h"
 #import "CDZScansListViewController.h"
 
-@interface CDZRootViewController ()
+#import "NSString+Trimming.h"
+
+@interface CDZRootViewController () <UIActionSheetDelegate>
 
 @property (nonatomic, readonly) UIViewController *scannerVC;
 @property (nonatomic, readonly) UIViewController *scansListVC;
 @property (nonatomic, readonly) UIView *separatorView;
+
+@property (nonatomic, strong) NSOrderedSet *availableActions;
 
 @end
 
@@ -89,7 +94,38 @@
 
 - (void)didScanQRCodeWithResult:(NSString *)result {
     [self.dataController addScanWithText:result];
-    [[UIPasteboard generalPasteboard] setString:result];
+    [self takeActionOnScanWithText:result];
+}
+
+#pragma mark - Actions
+
+- (void)takeActionOnScanWithText:(NSString *)text {
+    [CDZScanAction determineActionsForString:text result:^(NSOrderedSet *actions) {
+        self.availableActions = actions;
+
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:[text cdz_stringWithTrimmedNewlines]
+                                                                 delegate:self
+                                                        cancelButtonTitle:nil
+                                                   destructiveButtonTitle:nil
+                                                        otherButtonTitles:nil];
+
+        for (CDZScanAction *action in self.availableActions) {
+            [actionSheet addButtonWithTitle:action.localizedActionName];
+        }
+
+        NSInteger cancelButtonIdx = [actionSheet addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+        actionSheet.cancelButtonIndex = cancelButtonIdx;
+
+        [actionSheet showInView:self.view];
+    }];
+}
+
+#pragma mark UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == actionSheet.cancelButtonIndex) return;
+
+    [[self.availableActions objectAtIndex:(NSUInteger)buttonIndex] takeAction];
 }
 
 #pragma mark - Property Overrides

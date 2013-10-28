@@ -10,10 +10,11 @@
 
 + (void)determineActionsForString:(NSString *)string result:(void(^)(NSOrderedSet *actions))resultBlock;
 
+#pragma mark Abstract Methods
+
 @property (nonatomic, readonly) NSString *localizedActionName;
 
 + (CDZScanAction *)actionForString:(NSString *)string;
-
 - (void)takeAction;
 
 @end
