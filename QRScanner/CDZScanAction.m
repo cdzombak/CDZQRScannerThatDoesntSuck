@@ -13,6 +13,7 @@
 #import "CDZScanActionText.h"
 #import "CDZScanActionMap.h"
 #import "CDZScanActionGoogleMap.h"
+#import "CDZScanActionFantasticalView.h"
 
 @implementation CDZScanAction
 
@@ -43,6 +44,7 @@
                     [CDZScanActionText class],
                     [CDZScanActionMap class],
                     [CDZScanActionGoogleMap class],
+                    [CDZScanActionFantasticalView class],
                     ];
     });
     return classes;
