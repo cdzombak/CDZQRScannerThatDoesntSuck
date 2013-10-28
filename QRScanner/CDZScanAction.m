@@ -15,6 +15,9 @@
 #import "CDZScanActionGoogleMap.h"
 #import "CDZScanActionFantasticalView.h"
 #import "CDZScanActionFantasticalParse.h"
+#import "CDZScanActionChrome.h"
+#import "CDZScanActionSafari.h"
+#import "CDZScanActionDrafts.h"
 
 @implementation CDZScanAction
 
@@ -47,6 +50,9 @@
                     [CDZScanActionGoogleMap class],
                     [CDZScanActionFantasticalParse class],
                     [CDZScanActionFantasticalView class],
+                    [CDZScanActionSafari class],
+                    [CDZScanActionChrome class],
+                    [CDZScanActionDrafts class],
                     ];
     });
     return classes;

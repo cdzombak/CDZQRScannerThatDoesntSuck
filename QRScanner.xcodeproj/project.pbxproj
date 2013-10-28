@@ -51,6 +51,9 @@
 		834019AC181DD6B1006E4D78 /* CDZScanActionGoogleMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019AB181DD6B1006E4D78 /* CDZScanActionGoogleMap.m */; };
 		834019AF181E077F006E4D78 /* CDZScanActionFantasticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019AE181E077F006E4D78 /* CDZScanActionFantasticalView.m */; };
 		834019B2181E0A4D006E4D78 /* CDZScanActionFantasticalParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019B1181E0A4D006E4D78 /* CDZScanActionFantasticalParse.m */; };
+		834019B5181E0BBD006E4D78 /* CDZScanActionChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019B4181E0BBD006E4D78 /* CDZScanActionChrome.m */; };
+		834019B8181E0E0C006E4D78 /* CDZScanActionSafari.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019B7181E0E0C006E4D78 /* CDZScanActionSafari.m */; };
+		834019BB181E0ECF006E4D78 /* CDZScanActionDrafts.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019BA181E0ECF006E4D78 /* CDZScanActionDrafts.m */; };
 		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +124,12 @@
 		834019AE181E077F006E4D78 /* CDZScanActionFantasticalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionFantasticalView.m; sourceTree = "<group>"; };
 		834019B0181E0A4D006E4D78 /* CDZScanActionFantasticalParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionFantasticalParse.h; sourceTree = "<group>"; };
 		834019B1181E0A4D006E4D78 /* CDZScanActionFantasticalParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionFantasticalParse.m; sourceTree = "<group>"; };
+		834019B3181E0BBD006E4D78 /* CDZScanActionChrome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionChrome.h; sourceTree = "<group>"; };
+		834019B4181E0BBD006E4D78 /* CDZScanActionChrome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionChrome.m; sourceTree = "<group>"; };
+		834019B6181E0E0C006E4D78 /* CDZScanActionSafari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionSafari.h; sourceTree = "<group>"; };
+		834019B7181E0E0C006E4D78 /* CDZScanActionSafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionSafari.m; sourceTree = "<group>"; };
+		834019B9181E0ECF006E4D78 /* CDZScanActionDrafts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionDrafts.h; sourceTree = "<group>"; };
+		834019BA181E0ECF006E4D78 /* CDZScanActionDrafts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionDrafts.m; sourceTree = "<group>"; };
 		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -291,6 +300,12 @@
 				834019AE181E077F006E4D78 /* CDZScanActionFantasticalView.m */,
 				834019B0181E0A4D006E4D78 /* CDZScanActionFantasticalParse.h */,
 				834019B1181E0A4D006E4D78 /* CDZScanActionFantasticalParse.m */,
+				834019B3181E0BBD006E4D78 /* CDZScanActionChrome.h */,
+				834019B4181E0BBD006E4D78 /* CDZScanActionChrome.m */,
+				834019B6181E0E0C006E4D78 /* CDZScanActionSafari.h */,
+				834019B7181E0E0C006E4D78 /* CDZScanActionSafari.m */,
+				834019B9181E0ECF006E4D78 /* CDZScanActionDrafts.h */,
+				834019BA181E0ECF006E4D78 /* CDZScanActionDrafts.m */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -447,6 +462,7 @@
 				83401953181D926D006E4D78 /* CDZAppDelegate.m in Sources */,
 				834019AC181DD6B1006E4D78 /* CDZScanActionGoogleMap.m in Sources */,
 				83401956181D926D006E4D78 /* QRScanner.xcdatamodeld in Sources */,
+				834019BB181E0ECF006E4D78 /* CDZScanActionDrafts.m in Sources */,
 				8340199B181DC39D006E4D78 /* CDZScanActionCall.m in Sources */,
 				834019B2181E0A4D006E4D78 /* CDZScanActionFantasticalParse.m in Sources */,
 				8340194F181D926D006E4D78 /* main.m in Sources */,
@@ -457,6 +473,8 @@
 				8340197B181D97FD006E4D78 /* CDZRootViewController.m in Sources */,
 				834019A6181DD127006E4D78 /* CDZScanActionMap.m in Sources */,
 				834019AF181E077F006E4D78 /* CDZScanActionFantasticalView.m in Sources */,
+				834019B8181E0E0C006E4D78 /* CDZScanActionSafari.m in Sources */,
+				834019B5181E0BBD006E4D78 /* CDZScanActionChrome.m in Sources */,
 				8340199E181DCC6C006E4D78 /* CDZScanActionCopy.m in Sources */,
 				834019A1181DCD4A006E4D78 /* CDZScanActionText.m in Sources */,
 				8340198D181DACD4006E4D78 /* _CDZQRScan.m in Sources */,
