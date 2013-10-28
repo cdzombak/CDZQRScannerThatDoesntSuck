@@ -22,6 +22,6 @@ Pods
 
 # bootstrap script
 
-Vendor/
+Vendor/bundle/
 .bundle/
 bin/
