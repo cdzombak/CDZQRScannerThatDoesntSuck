@@ -54,6 +54,7 @@
 		834019B5181E0BBD006E4D78 /* CDZScanActionChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019B4181E0BBD006E4D78 /* CDZScanActionChrome.m */; };
 		834019B8181E0E0C006E4D78 /* CDZScanActionSafari.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019B7181E0E0C006E4D78 /* CDZScanActionSafari.m */; };
 		834019BB181E0ECF006E4D78 /* CDZScanActionDrafts.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019BA181E0ECF006E4D78 /* CDZScanActionDrafts.m */; };
+		834019BE181E110A006E4D78 /* NSString+Trimming.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019BD181E110A006E4D78 /* NSString+Trimming.m */; };
 		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +131,8 @@
 		834019B7181E0E0C006E4D78 /* CDZScanActionSafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionSafari.m; sourceTree = "<group>"; };
 		834019B9181E0ECF006E4D78 /* CDZScanActionDrafts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionDrafts.h; sourceTree = "<group>"; };
 		834019BA181E0ECF006E4D78 /* CDZScanActionDrafts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionDrafts.m; sourceTree = "<group>"; };
+		834019BC181E110A006E4D78 /* NSString+Trimming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trimming.h"; sourceTree = "<group>"; };
+		834019BD181E110A006E4D78 /* NSString+Trimming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trimming.m"; sourceTree = "<group>"; };
 		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -279,6 +282,8 @@
 				83401990181DB1E7006E4D78 /* NSManagedObject+CDZAdditions.m */,
 				834019A7181DD5CC006E4D78 /* NSString+URLEncoding.h */,
 				834019A8181DD5CC006E4D78 /* NSString+URLEncoding.m */,
+				834019BC181E110A006E4D78 /* NSString+Trimming.h */,
+				834019BD181E110A006E4D78 /* NSString+Trimming.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 				834019A6181DD127006E4D78 /* CDZScanActionMap.m in Sources */,
 				834019AF181E077F006E4D78 /* CDZScanActionFantasticalView.m in Sources */,
 				834019B8181E0E0C006E4D78 /* CDZScanActionSafari.m in Sources */,
+				834019BE181E110A006E4D78 /* NSString+Trimming.m in Sources */,
 				834019B5181E0BBD006E4D78 /* CDZScanActionChrome.m in Sources */,
 				8340199E181DCC6C006E4D78 /* CDZScanActionCopy.m in Sources */,
 				834019A1181DCD4A006E4D78 /* CDZScanActionText.m in Sources */,

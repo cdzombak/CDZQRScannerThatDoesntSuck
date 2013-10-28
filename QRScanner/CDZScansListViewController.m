@@ -12,6 +12,7 @@
 #import "CDZDataController.h"
 #import "CDZQRScan.h"
 
+#import "NSString+Trimming.h"
 #import "NSManagedObject+CDZAdditions.h"
 
 @interface CDZScansListViewController () <NSFetchedResultsControllerDelegate>
@@ -45,8 +46,7 @@
                                            CDZQRScan *scan,
                                            UITableView *tableView,
                                            NSIndexPath *indexPath) {
-        NSString *trimmedText = [[scan.text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@" "];
-        cell.textLabel.text = trimmedText;
+        cell.textLabel.text = [scan.text cdz_stringWithTrimmedNewlines];
     };
     self.dataSource.tableView = self.tableView;
     self.dataSource.fallbackTableDataSource = self;
