@@ -15,6 +15,14 @@
 #import "NSString+Trimming.h"
 #import "NSManagedObject+CDZAdditions.h"
 
+@implementation UIResponder (CDZScansListViewController)
+
+- (void)didSelectScanWithText:(NSString *)text {
+    [[self nextResponder] didSelectScanWithText:text];
+}
+
+@end
+
 @interface CDZScansListViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) SSCoreDataSource *dataSource;
@@ -58,12 +66,20 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         CDZQRScan *scan = [self.dataSource itemAtIndexPath:indexPath];
         [self.dataController deleteScan:scan];
-        
     }
 }
 
 - (bool)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CDZQRScan *scan = [self.dataSource itemAtIndexPath:indexPath];
+    [[self nextResponder] didSelectScanWithText:scan.text];
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Property Overrides

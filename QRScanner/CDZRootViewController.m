@@ -94,12 +94,12 @@
 
 - (void)didScanQRCodeWithResult:(NSString *)result {
     [self.dataController addScanWithText:result];
-    [self takeActionOnScanWithText:result];
+    [self didSelectScanWithText:result];
 }
 
 #pragma mark - Actions
 
-- (void)takeActionOnScanWithText:(NSString *)text {
+- (void)didSelectScanWithText:(NSString *)text {
     [CDZScanAction determineActionsForString:text result:^(NSOrderedSet *actions) {
         self.availableActions = actions;
 
