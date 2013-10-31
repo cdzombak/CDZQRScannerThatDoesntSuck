@@ -55,6 +55,7 @@
                                            UITableView *tableView,
                                            NSIndexPath *indexPath) {
         cell.textLabel.text = [scan.text cdz_stringWithTrimmedNewlines];
+        cell.textLabel.lineBreakMode = NSLineBreakByTruncatingMiddle;
     };
     self.dataSource.tableView = self.tableView;
     self.dataSource.fallbackTableDataSource = self;
