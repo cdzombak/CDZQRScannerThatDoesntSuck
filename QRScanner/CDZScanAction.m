@@ -18,6 +18,7 @@
 #import "CDZScanActionChrome.h"
 #import "CDZScanActionSafari.h"
 #import "CDZScanActionDrafts.h"
+#import "CDZScanActionEmail.h"
 
 @implementation CDZScanAction
 
@@ -52,6 +53,7 @@
                     [CDZScanActionFantasticalView class],
                     [CDZScanActionSafari class],
                     [CDZScanActionChrome class],
+                    [CDZScanActionEmail class],
                     [CDZScanActionDrafts class],
                     ];
     });
