@@ -19,7 +19,7 @@
 @implementation CDZScanActionFantasticalParse
 
 + (CDZScanAction *)actionForString:(NSString *)string {
-    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"fantastical://"]]) return nil;
+    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"fantastical2://"]]) return nil;
 
     NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeDate error:nil];
     NSTextCheckingResult *result = [detector firstMatchInString:string options:0 range:NSMakeRange(0, string.length)];
@@ -34,7 +34,7 @@
 
 - (void)takeAction {
     NSString *encodedString = [self.text cdz_urlEncodedString];
-    NSString *urlString = [NSString stringWithFormat:@"fantastical://parse?sentence=%@", encodedString];
+    NSString *urlString = [NSString stringWithFormat:@"fantastical2://parse?sentence=%@", encodedString];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 

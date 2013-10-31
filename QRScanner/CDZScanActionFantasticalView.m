@@ -17,7 +17,7 @@
 @implementation CDZScanActionFantasticalView
 
 + (CDZScanAction *)actionForString:(NSString *)string {
-    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"fantastical://"]]) return nil;
+    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"fantastical2://"]]) return nil;
 
     NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeDate error:nil];
     NSTextCheckingResult *result = [detector firstMatchInString:string options:0 range:NSMakeRange(0, string.length)];
@@ -32,7 +32,7 @@
 - (void)takeAction {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd";
-    NSString *urlString = [NSString stringWithFormat:@"fantastical://show?date=%@", [formatter stringFromDate:self.result.date]];
+    NSString *urlString = [NSString stringWithFormat:@"fantastical2://show?date=%@", [formatter stringFromDate:self.result.date]];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 
