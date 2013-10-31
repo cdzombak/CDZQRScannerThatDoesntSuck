@@ -13,6 +13,8 @@
 
 #import <BugSense-iOS/BugSenseController.h>
 
+static NSString * const CDZBugSenseAPIKey = @"b70515f3";
+
 @interface CDZAppDelegate ()
 
 @property (nonatomic, readonly) CDZDataController *dataController;
@@ -25,7 +27,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [BugSenseController sharedControllerWithBugSenseAPIKey:@"b70515f3"];
+    [BugSenseController sharedControllerWithBugSenseAPIKey:CDZBugSenseAPIKey];
     [BugSenseController setLogMessagesCount:10];
     [BugSenseController setLogMessagesLevel:8];
 
