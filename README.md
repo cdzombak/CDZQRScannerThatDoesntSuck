@@ -11,7 +11,11 @@ External depencies:
 
 ## Requirements
 
-iOS 7+.
+* iOS 7+.
+
+## App Store
+
+* https://itunes.apple.com/us/app/a-qr-scanner-that-doesnt-suck/id735754450?ls=1&mt=8
 
 ## License
 
