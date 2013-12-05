@@ -15,6 +15,7 @@
 #import "CDZScansListViewController.h"
 
 #import "NSString+Trimming.h"
+#import "UIWindow+Hairline.h"
 
 @interface CDZRootViewController () <UIActionSheetDelegate>
 
@@ -84,7 +85,7 @@
 
     CGRect separatorFrame = (CGRect) {
         .origin = CGPointMake(0, CGRectGetMaxY(scannerFrame)),
-        .size = CGSizeMake(CGRectGetWidth(self.view.bounds), 1.0f/[[UIScreen mainScreen] scale])
+        .size = CGSizeMake(CGRectGetWidth(self.view.bounds), [self.view.window cdz_hairlineWidth])
     };
 
     self.scannerVC.view.frame = scannerFrame;

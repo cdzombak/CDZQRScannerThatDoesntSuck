@@ -56,6 +56,7 @@
 		834019BB181E0ECF006E4D78 /* CDZScanActionDrafts.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019BA181E0ECF006E4D78 /* CDZScanActionDrafts.m */; };
 		834019BE181E110A006E4D78 /* NSString+Trimming.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019BD181E110A006E4D78 /* NSString+Trimming.m */; };
 		834019C31821ED9E006E4D78 /* CDZScanActionEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 834019C21821ED9E006E4D78 /* CDZScanActionEmail.m */; };
+		835AF6D11850331C00DED011 /* UIWindow+Hairline.m in Sources */ = {isa = PBXBuildFile; fileRef = 835AF6D01850331C00DED011 /* UIWindow+Hairline.m */; };
 		F3967DB6F465463D8B7D8066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBA172A05E94DC4A2964F0E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,8 @@
 		834019BD181E110A006E4D78 /* NSString+Trimming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trimming.m"; sourceTree = "<group>"; };
 		834019C11821ED9E006E4D78 /* CDZScanActionEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDZScanActionEmail.h; sourceTree = "<group>"; };
 		834019C21821ED9E006E4D78 /* CDZScanActionEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDZScanActionEmail.m; sourceTree = "<group>"; };
+		835AF6CF1850331C00DED011 /* UIWindow+Hairline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Hairline.h"; sourceTree = "<group>"; };
+		835AF6D01850331C00DED011 /* UIWindow+Hairline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Hairline.m"; sourceTree = "<group>"; };
 		ECBA172A05E94DC4A2964F0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -287,6 +290,8 @@
 				834019A8181DD5CC006E4D78 /* NSString+URLEncoding.m */,
 				834019BC181E110A006E4D78 /* NSString+Trimming.h */,
 				834019BD181E110A006E4D78 /* NSString+Trimming.m */,
+				835AF6CF1850331C00DED011 /* UIWindow+Hairline.h */,
+				835AF6D01850331C00DED011 /* UIWindow+Hairline.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -487,6 +492,7 @@
 				834019B8181E0E0C006E4D78 /* CDZScanActionSafari.m in Sources */,
 				834019BE181E110A006E4D78 /* NSString+Trimming.m in Sources */,
 				834019B5181E0BBD006E4D78 /* CDZScanActionChrome.m in Sources */,
+				835AF6D11850331C00DED011 /* UIWindow+Hairline.m in Sources */,
 				8340199E181DCC6C006E4D78 /* CDZScanActionCopy.m in Sources */,
 				834019A1181DCD4A006E4D78 /* CDZScanActionText.m in Sources */,
 				8340198D181DACD4006E4D78 /* _CDZQRScan.m in Sources */,
