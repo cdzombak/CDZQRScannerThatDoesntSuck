@@ -133,7 +133,7 @@
 
 - (UIViewController *)scannerVC {
     if (!_scannerVC) {
-        CDZQRScanningViewController *vc = [CDZQRScanningViewController new];
+        CDZQRScanningViewController *vc = [[CDZQRScanningViewController alloc] init];
         vc.errorBlock = ^(NSError *error) {
             [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"QR Scanning Error", nil)
                                         message:[error description]
