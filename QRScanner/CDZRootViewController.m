@@ -23,6 +23,7 @@
 @property (nonatomic, readonly) UIViewController *scansListVC;
 @property (nonatomic, readonly) UIView *separatorView;
 
+@property (nonatomic, weak) UIActionSheet *displayedActionSheet;
 @property (nonatomic, strong) NSOrderedSet *availableActions;
 
 @end
@@ -103,6 +104,9 @@
 - (void)didSelectScanWithText:(NSString *)text {
     [CDZScanAction determineActionsForString:text result:^(NSOrderedSet *actions) {
         self.availableActions = actions;
+        
+        UIActionSheet *displayedActionSheet = self.displayedActionSheet;
+        [displayedActionSheet dismissWithClickedButtonIndex:displayedActionSheet.cancelButtonIndex animated:NO];
 
         UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:[text cdz_stringWithTrimmedNewlines]
                                                                  delegate:self
@@ -118,6 +122,8 @@
         actionSheet.cancelButtonIndex = cancelButtonIdx;
 
         [actionSheet showInView:self.view];
+        
+        self.displayedActionSheet = actionSheet;
     }];
 }
 
